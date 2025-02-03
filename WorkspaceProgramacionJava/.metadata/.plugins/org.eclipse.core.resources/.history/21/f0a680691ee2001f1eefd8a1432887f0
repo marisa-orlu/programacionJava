@@ -1,0 +1,69 @@
+package ejercicio5;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		int opcion=0, numero=1, suma=0, potencia=0, base=0, exponente=0, n=0;
+		
+		Calculadora resultado = new Calculadora(numero, suma, n, potencia, base, exponente);
+
+		System.out.println("------------Menu------------");
+		System.out.println("------elige una opcion------");
+		System.out.println("1) Factorial de un numero");
+		System.out.println("2) Suma de números hasta n");
+		System.out.println("3) Potencia (base^exponente)");
+		System.out.println("4) Salir del programa)");
+		System.out.println("Introduce una opcion: ");
+		
+		
+		do {
+			opcion = sc.nextInt();
+			switch(opcion) {
+			case 1:
+				{
+					System.out.println("1) Factorial de un numero");
+					System.out.println("Introduce un numero");
+					numero= sc.nextInt();
+					System.out.println("El factorial del numero "+numero+" es "+resultado.esFactorial(numero));
+					break;
+				}
+				
+			case 2:
+			{
+				System.out.println("2) Suma de números hasta n");
+				System.out.println("Introduce un numero(n): ");
+				n= sc.nextInt();
+				System.out.println("El resultado es: "+resultado.sumaNumeros(n));
+				break;
+			}
+				
+			case 3:
+			{
+				System.out.println("3) Potencia (base^exponente)");
+				System.out.println("Introduce la base: ");
+				base= sc.nextInt();
+				System.out.println("Introduce el exponente: ");
+				exponente= sc.nextInt();
+				
+				System.out.println("La potencia es: "+resultado.potencia( base, exponente));	
+				break;
+			}
+				
+			case 4:
+			{
+				System.out.println("Saliendo del programa...");
+				break;
+			}
+			default:
+			{
+				System.out.println("Opcion no valida");
+				break;
+				}			
+			}
+		}while(opcion!=4);
+		
+	}
+}

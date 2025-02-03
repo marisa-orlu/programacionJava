@@ -1,0 +1,86 @@
+package ejercicio5;
+
+public class Calculadora {
+	public int numero;
+	public int suma;
+	public int n;
+	public int potencia;
+	public int base;
+	public int exponente;
+	
+	public Calculadora(int numero, int suma, int n, int potencia, int base, int exponente) {
+		this.numero = numero;
+		this.suma = suma;
+		this.n = n;
+		this.potencia = potencia;
+		this.base = base;
+		this.exponente = exponente;
+	}
+
+	public int getNumero() {
+		return numero;
+	}
+
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+
+	public int getSuma() {
+		return suma;
+	}
+
+	public void setSuma(int suma) {
+		this.suma = suma;
+	}
+
+	public int getN() {
+		return n;
+	}
+
+	public void setN(int n) {
+		this.n = n;
+	}
+
+	public int getPotencia() {
+		return potencia;
+	}
+
+	public void setPotencia(int potencia) {
+		this.potencia = potencia;
+	}
+
+	public int getBase() {
+		return base;
+	}
+
+	public void setBase(int base) {
+		this.base = base;
+	}
+
+	public int getExponente() {
+		return exponente;
+	}
+
+	public void setExponente(int exponente) {
+		this.exponente = exponente;
+	}
+
+	@Override
+	public String toString() {
+		return "Calculadora [numero=" + numero + ", suma=" + suma + ", n=" + n + ", potencia=" + potencia + ", base="
+				+ base + ", exponente=" + exponente + "]";
+	}
+	
+	public int esFactorial(int numero) {
+		if(numero==0) {
+			return 1;
+		}
+		else {
+			for(int i=1;i<numero;i++) {
+				numero= numero*i;
+			}
+			return numero;
+		}
+	}
+	
+}

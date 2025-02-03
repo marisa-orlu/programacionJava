@@ -1,0 +1,22 @@
+package ejercicio1;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int numero, resultado;
+		
+		System.out.println("----Este programa calcula el factorial de un numero----");
+		System.out.println("Introduce un numero: ");
+		numero = sc.nextInt();
+		
+		System.out.println("Ahora se va a calcular el factorial");
+		
+		Factorial factorial = new Factorial(numero);
+		
+		System.out.println("El factorial es: "+factorial.calcularFactorial());
+		System.out.println("--\n"+factorial.toString());
+	}
+}

@@ -1,0 +1,27 @@
+package ejercicio3;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner (System.in); 
+		
+		int numero= 0;
+		
+		NumeroPrimo numPrimo = new NumeroPrimo(numero);
+		
+		System.out.println("Introduce un numero: ");
+		numero = sc.nextInt();
+		
+		if(numPrimo.esPrimo(numero)== false) {
+			System.out.println("El numero: "+numero+" no es primo");
+		}
+		else {
+			System.out.println("El numero: "+numero+" si es primo");
+		}
+		
+
+	}
+
+}

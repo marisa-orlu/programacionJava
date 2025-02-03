@@ -1,0 +1,46 @@
+package ejercicio1;
+
+
+	/*
+	 * Ejercicio 1: Clase Factorial
+	Crea una clase Factorial que tenga:
+
+	Un atributo numero con su getter y setter.
+	Un método calcularFactorial() que devuelva el factorial del número.
+	Un toString() que muestre el número y su factorial.
+	Un programa principal que permita al usuario ingresar un número y calcular su factorial.
+
+	 */
+	public class Factorial {
+		
+		public int numero;
+
+		//Constructor
+		public Factorial(int numero) {
+			this.numero = numero;
+		}
+		//Getters and setters
+		public int getNumero() {
+			return numero;
+		}
+		public void setNumero(int numero) {
+			this.numero = numero;
+		}
+		
+		@Override
+		public String toString() {
+			return "factorial [numero=" + numero + "]";
+		}
+		
+		public int calcularFactorial(int num){
+			if(num==0) {
+				return 1;
+			}
+			else {
+				for(int i=1; i<5;i++) {
+					num= num*i;
+				}
+				return num;
+			}
+		}
+	}

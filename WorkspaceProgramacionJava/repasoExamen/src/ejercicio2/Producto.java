@@ -1,0 +1,49 @@
+package ejercicio2;
+
+public class Producto {
+
+	public String nombre;
+	public double precio;
+	public int descuento=25;
+	
+	public Producto(String nombre, double precio, int descuento) {
+		this.nombre = nombre;
+		this.precio = precio;
+		this.descuento = descuento;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public double getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(double precio) {
+		this.precio = precio;
+	}
+
+	public int getDescuento() {
+		return descuento;
+	}
+
+	public void setDescuento(int descuento) {
+		this.descuento = descuento;
+	}
+
+	@Override
+	public String toString() {
+		return "Producto [nombre=" + nombre + ", precio=" + precio + ", descuento=" + descuento + "]";
+	}
+	
+	public double calcularPrecioFinal(double precio, int descuento, double precioFinal) {
+		precioFinal= precio- (precio*descuento/100);
+		return precioFinal;
+	}
+	
+}
