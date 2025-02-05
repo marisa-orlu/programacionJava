@@ -1,0 +1,31 @@
+package proyectoGrupo;
+
+import java.util.Scanner;
+
+public class ejercicioGrupo {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Comienza el protocolo de preparacion para el despegue");
+		System.out.print("------------------------------------------------------");
+		
+		System.out.println("Primera pregunta");
+		System.out.println("Introduce 'si', si todos tienen colocados los cinturones " );
+		
+		String cinturon= sc.next();
+		
+		do {
+			if(cinturon=="si") {
+				System.out.print("Genial!, pasaremos a la siguiente pregunta");
+			}
+			else if(cinturon!="si") {
+				System.out.print("Vaya, tienes que confirmar que tienes el cinturon...");
+			}
+		}while(cinturon=="si");
+		
+		
+		
+		
+		}
+
+}

@@ -1,0 +1,69 @@
+package ejercicio2Examen;
+
+public class Discos {
+
+	public String titulo;
+	public String grupo;
+	public String cantante;
+	public int anioPublicacion;
+	public double precio;
+	public int stock;
+
+	public Discos(String titulo, String grupo, String cantante, int anioPublicacion, double precio, int stock) {
+		this.titulo = titulo;
+		this.grupo = grupo;
+		this.cantante = cantante;
+		this.anioPublicacion = anioPublicacion;
+		this.precio = precio;
+		this.stock = stock;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public String getGrupo() {
+		return grupo;
+	}
+
+	public void setGrupo(String grupo) {
+		this.grupo = grupo;
+	}
+
+	public String getCantante() {
+		return cantante;
+	}
+
+	public void setCantante(String cantante) {
+		this.cantante = cantante;
+	}
+
+	public int getAnioPublicacion() {
+		return anioPublicacion;
+	}
+
+	public void setAnioPublicacion(int anioPublicacion) {
+		this.anioPublicacion = anioPublicacion;
+	}
+
+	public double getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(double precio) {
+		this.precio = precio;
+	}
+
+	public int getStock() {
+		return stock;
+	}
+
+	public void setStock(int stock) {
+		this.stock = stock;
+	}
+
+}

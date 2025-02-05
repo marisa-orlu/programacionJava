@@ -1,0 +1,19 @@
+package arrayteoria;
+
+import java.util.Scanner;
+
+public class Ejercicio3 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String nombre="";
+		int edad=0;
+		
+		Persona[] persona   = new Persona[3];
+		
+		persona[3] = new Persona(nombre,edad);
+		
+		
+	}
+
+}

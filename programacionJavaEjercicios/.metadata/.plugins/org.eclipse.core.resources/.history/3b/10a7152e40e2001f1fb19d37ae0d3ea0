@@ -1,0 +1,157 @@
+package videojuegoBasico;
+
+import java.util.Random;
+
+public class personaje {
+
+	public String nombre;
+	public int saludActual;
+	public int saludMaxima;
+	public int resistenciaActual;
+	public int resistenciaMaxima;
+	public int nivel=1;
+	public String clase;
+	public int puntos=0;
+	public int ataque;
+	
+	public personaje() {
+		this.nombre = "Sakamoto";
+		this.saludActual = 100;
+		int saludMaxima=250;
+		this.resistenciaActual = 10;
+		this.resistenciaMaxima=250;
+		this.nivel= 25;
+		this.clase = "Experto";	
+		this.puntos= 250;
+		this.ataque=20;
+	}
+	public personaje (String nombre,int saludActual,int saludMaxima,int resistencia,int nivel,String clase, int ataque){
+		this.nombre = nombre;
+		this.saludActual = saludActual;
+		this.saludMaxima= saludMaxima;
+		this.resistenciaActual = resistenciaActual;
+		this.resistenciaMaxima = resistenciaMaxima;
+		this.nivel= nivel;
+		this.clase = clase;	
+		this.ataque= ataque;
+	}
+	
+	public String getNombre() {
+		return nombre;
+	}
+	public int getSaludActual() {
+		return saludActual;
+	}
+	public void setSaludActual(int saludActual) {
+		this.saludActual = saludActual;
+	}
+	public int getSaludMaxima() {
+		return saludMaxima;
+	}
+	public void setSaludMaxima(int saludMaxima) {
+		this.saludMaxima = saludMaxima;
+	}
+	public int getResistenciaActual() {
+		return resistenciaActual;
+	}
+	public void setResistenciaActual(int resistenciaActual) {
+		this.resistenciaActual = resistenciaActual;
+	}
+	public int getResistenciaMaxima() {
+		return resistenciaMaxima;
+	}
+	public void setResistenciaMaxima(int resistenciaMaxima) {
+		this.resistenciaMaxima = resistenciaMaxima;
+	}
+	public int getPuntos() {
+		return puntos;
+	}
+	public void setPuntos(int puntos) {
+		this.puntos = puntos;
+	}
+	public int getNivel() {
+		return nivel;
+	}
+
+	public String getClase() {
+		return clase;
+	}
+	public void setClase(String clase) {
+		this.clase = clase;
+	}
+	 
+	public int getAtaque() {
+		return ataque;
+	}
+	public void setAtaque(int ataque) {
+		this.ataque = ataque;
+	}
+	
+	public void recibirDaño() {
+        //Random random = new Random();
+        //cantidad = random.nextInt(51);
+        int cantidad = 10;
+        
+        System.out.println("-----El juego va a comenzar-----\n");
+        
+        int dañoFinal=cantidad;
+        if (dañoFinal<0) {
+            dañoFinal = 0;
+        }
+        
+        saludActual-=dañoFinal;
+        
+        if (saludActual<0) {
+        	System.out.println(""+nombre+" has muerto...");
+            saludActual=0;
+        }
+        System.out.println(nombre + " ha recibido " + dañoFinal + " de daño");
+        System.out.println("Salud restante: "+saludActual);
+        
+        //personaje.setSalud(dañoFinal);
+        //personaje.setSalud(personaje.getSalud()-cantidad);
+    }
+	public void Curarse() {
+        Random random = new Random();
+        int aumentoSalud = random.nextInt(51);
+
+        saludActual+=aumentoSalud;
+
+        int saludMaxima=225;
+        if (saludActual>saludMaxima) {
+            saludActual=saludMaxima;
+        }
+
+        System.out.println(""+nombre + " se ha curado "+aumentoSalud);
+    }
+	 public void ganarPuntos(int puntos) {
+		 Random random = new Random();
+		 int puntosGanados = random.nextInt(51);
+		 this.puntos += puntosGanados;
+		 System.out.println(nombre + " ha ganado " + puntosGanados + " puntos. Total de puntos: " + this.puntos);
+		 
+	 }
+	 public void subirNivel() {	        
+		 //puntos_nec= 0,02+ (nivelActual+1)3 +3.06(nivel_actual)2 + 105,6(nivelActual+1)-895
+		 double puntosNecesarios = 0.02*Math.pow(nivel,3) + 3.06*Math.pow(nivel,2) + 105.6 *nivel-895;
+
+		 if (puntos>=puntosNecesarios){
+			 nivel++;
+			 puntos-=puntosNecesarios;
+			 System.out.println("Olee oleee er betih, estas de suerte, HAS SUBIDO DE NIVEL!!!!");
+			 System.out.println("Tu nivel actual es: "+nivel);			 
+			 } 
+		 
+		 else{
+	            System.out.println(nombre + " Jopeta, no has subido de nivel.... Puntos actuales: " + puntos + ", puntos necesarios: " + puntosNecesarios);
+	        }
+	    }
+	 
+	@Override
+	public String toString() {
+		return "personaje [nombre=" + nombre + ", saludActual=" + saludActual + ", saludMaxima=" + saludMaxima
+				+ ", resistenciaActual=" + resistenciaActual + ", resistenciaMaxima=" + resistenciaMaxima + ", nivel="
+				+ nivel + ", clase=" + clase + ", puntos=" + puntos + ", ataque=" + ataque + "]";
+	}
+	  
+}

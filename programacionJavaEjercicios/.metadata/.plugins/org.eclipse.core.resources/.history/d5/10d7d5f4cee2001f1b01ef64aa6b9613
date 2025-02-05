@@ -1,0 +1,24 @@
+package PracticaArray;
+
+public class ejercicio4 {
+
+	/*
+	 * Se introducen por teclado sucesivamente nombre y apellidos de un
+		usuario que se DEBEN almacenar en un array bidimensional (los
+		nombres en una columna y los apellidos en otra). La salida DEBE
+		SER en cada línea:
+		
+		a.- El nombre de la primera entrada seguido del apellido del
+		último.
+		b.- El nombre del usuario que está en el medio de la tabla (o de los
+		dos del medio en caso de ser un número par).
+		c.- El nombre de la última entrada seguido del apellido del
+		primero.
+	 */
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}

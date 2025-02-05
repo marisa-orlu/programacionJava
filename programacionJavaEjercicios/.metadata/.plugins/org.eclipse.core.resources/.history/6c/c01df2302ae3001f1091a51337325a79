@@ -1,0 +1,127 @@
+package PracticaArray;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class ejercicio2 {
+	
+//	Escribe un programa que genere 20 números enteros aleatorios
+//	entre 0 y 99 y los almacene en un array. El programa debe crear un
+//	nuevo array con los números primos que haya entre esos 20
+//	números. Luego debe mostrar los dos arrays.
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Random random = new Random();
+		
+		int[] array = new int[20]; 
+        int[] primo = new int[array.length];
+		int[] noPrimo = new int[array.length];
+		
+		
+	    for(int i=0; i<array.length;i++) {
+	    	array[i] = random.nextInt(100);
+	    	System.out.println("Posicion: "+i+" "+array[i]);
+	    }
+	    
+	    
+	    
+	    for (int i = 0; i < array.length; i++) {
+            if (esPrimo(array[i])) {
+                primo[i] = array[i]; 
+            } else {
+                noPrimo[i] = array[i]; 
+            	}
+	    	}
+	    
+	    
+	    for (int num : primo) {
+            if (num != 0) {
+                System.out.print(num + " ");
+            }
+        }
+	    
+	    
+ }
+	  
+	    public static boolean esPrimo(int num) {
+	        if (num < 2) {
+	            return false;
+	        }
+	        for (int i = 2; i * i <= num; i++) {
+	            if (num % i == 0) {
+	                return false;
+	            }
+	        }
+	        return true;
+	    }
+}
+	    
+	
+	
+	/*
+	 * package PracticaArray;
+
+import java.util.Random;
+
+public class Ejercicio2 {
+
+    public static void main(String[] args) {
+        Random random = new Random();
+        
+        int[] array = new int[20];  // Array original con números aleatorios
+        int[] primo = new int[array.length]; // Array para los primos
+        int[] noPrimo = new int[array.length]; // Array para los no primos
+
+        // Generamos los 20 números aleatorios y los mostramos
+        System.out.println("Array original:");
+        for (int i = 0; i < array.length; i++) {
+            array[i] = random.nextInt(100); // Números entre 0 y 99
+            System.out.print(array[i] + " ");
+        }
+        System.out.println();
+
+        // Separar primos y no primos
+        for (int i = 0; i < array.length; i++) {
+            if (esPrimo(array[i])) {
+                primo[i] = array[i]; // Guardamos en el array de primos
+            } else {
+                noPrimo[i] = array[i]; // Guardamos en el array de no primos
+            }
+        }
+
+        // Mostrar los números primos
+        System.out.println("\nNúmeros primos:");
+        for (int num : primo) {
+            if (num != 0) {
+                System.out.print(num + " ");
+            }
+        }
+
+        // Mostrar los números no primos
+        System.out.println("\n\nNúmeros no primos:");
+        for (int num : noPrimo) {
+            if (num != 0) {
+                System.out.print(num + " ");
+            }
+        }
+    }
+
+    // Método corregido para verificar si un número es primo
+    public static boolean esPrimo(int num) {
+        if (num < 2) {
+            return false;
+        }
+        for (int i = 2; i * i <= num; i++) { // Solo verificamos hasta la raíz cuadrada
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+	 */
+	
+
+
