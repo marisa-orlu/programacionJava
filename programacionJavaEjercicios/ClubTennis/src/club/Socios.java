@@ -51,7 +51,7 @@ public class Socios {
 				+ ", cuota=" + cuota + '}';
 	}
 
-	public static double calcularCuota(int antiguedad, double cuota_base) {
+	public double calcularCuota(int antiguedad, double cuota_base) {
 		cuota_base = 70.5;
 		double descuento_mayor = 15;
 		double descuento_menor = 5;
@@ -61,7 +61,8 @@ public class Socios {
 			couta_final = cuota_base - (cuota_base * descuento_mayor) / 100;
 		} else if (antiguedad < 20 && antiguedad > 10) {
 			couta_final = cuota_base - (cuota_base * descuento_menor) / 100;
-		}
+		} else
+			couta_final = cuota_base;
 		return couta_final;
 	}
 }
