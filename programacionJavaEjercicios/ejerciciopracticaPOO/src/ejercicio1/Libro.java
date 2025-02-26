@@ -1,82 +1,54 @@
 package ejercicio1;
 
-import java.util.Arrays;
-
 public class Libro {
-	public String titulo;
-	public String autor;
-	public int anio_publicacion;
-	public String[] estado = { "disponible", "prestado" };
+	private String titulo;
+	private String autor;
+	private int anioPublicacion;
+	private String estado; // "disponible" o "prestado"
 
-	public Libro(String titulo, String autor, int anio_publicacion, String[] estado) {
-		super();
+	public Libro(String titulo, String autor, int anioPublicacion, String estado) {
 		this.titulo = titulo;
 		this.autor = autor;
-		this.anio_publicacion = anio_publicacion;
+		this.anioPublicacion = anioPublicacion;
 		this.estado = estado;
-	}
-
-	public Libro() {
-		// Constructor vacío (sin parámetros)
-		this.titulo = "";
-		this.autor = "";
-		this.anio_publicacion = 0;
-		this.estado = new String[] { "prestado", "disponible" };
 	}
 
 	public String getTitulo() {
 		return titulo;
 	}
 
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
-	}
-
 	public String getAutor() {
 		return autor;
 	}
 
-	public void setAutor(String autor) {
-		this.autor = autor;
+	public int getAnioPublicacion() {
+		return anioPublicacion;
 	}
 
-	public int getAnio_publicacion() {
-		return anio_publicacion;
-	}
-
-	public void setAnio_publicacion(int anio_publicacion) {
-		this.anio_publicacion = anio_publicacion;
-	}
-
-	public String[] getEstado() {
+	public String getEstado() {
 		return estado;
-	}
-
-	public void setEstado(String[] estado) {
-		this.estado = estado;
 	}
 
 	@Override
 	public String toString() {
-		return "Libro [titulo=" + titulo + ", autor=" + autor + ", anio_publicacion=" + anio_publicacion + ", estado="
-				+ Arrays.toString(estado) + "]";
+		return "Libro [Título=" + titulo + ", Autor=" + autor + ", Año=" + anioPublicacion + ", Estado=" + estado + "]";
 	}
 
 	public void prestar() {
-		if (estado[0].equals("disponible")) {
-			estado[0] = "prestado";
-			System.out.println("El libro ha sido prestado");
+		if (estado.equals("disponible")) {
+			estado = "prestado";
+			System.out.println("El libro '" + titulo + "' ha sido prestado.");
 		} else {
-			System.out.println("El libro ya esta siendo prestado");
+			System.out.println("El libro '" + titulo + "' ya está prestado.");
 		}
 	}
 
-	public void disponible() {
-		if (estado[0].equals("prestado")) {
-			estado[0] = "disponible";
-			System.out.println("El libro esta disponible");
+	public void devolver() {
+		if (estado.equals("prestado")) {
+			estado = "disponible";
+			System.out.println("El libro '" + titulo + "' ha sido devuelto y ahora está disponible.");
 		} else {
-			System.out.println("El libro no esta disponible");
+			System.out.println("El libro '" + titulo + "' ya está disponible.");
 		}
 	}
 

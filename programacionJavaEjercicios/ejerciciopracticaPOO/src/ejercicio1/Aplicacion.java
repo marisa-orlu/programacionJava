@@ -1,6 +1,5 @@
 package ejercicio1;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Aplicacion {
@@ -8,7 +7,7 @@ public class Aplicacion {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-		Biblioteca biblioteca = new Biblioteca(new ArrayList<Libro>());
+		Biblioteca biblioteca = new Biblioteca();
 
 		int op = 0;
 
@@ -23,7 +22,17 @@ public class Aplicacion {
 			op = sc.nextInt();
 
 			switch (op) {
+			case 1: {
+				System.out.println("Has introducido uno para prestar el libro");
+			}
 
+			case 3: {
+				System.out.println("Has introducido uno para agregar el libro");
+			}
+
+			default: {
+				System.out.println("Opción no valida, vuelve a intentarlo");
+			}
 			}
 		}
 
