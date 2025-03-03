@@ -14,6 +14,7 @@ public class Aplicacion {
 
 		System.out.println("Introduce 1 para ingresar dinero a la cuenta bancaria");
 		System.out.println("Introduce 2 para ingresar dinero a la cuenta de ahorros");
+		System.out.println("Introduce 3 para retirar dinero a la cuenta de ahorros");
 		op = sc.nextInt();
 
 		switch (op) {
