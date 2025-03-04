@@ -4,11 +4,14 @@ public class Socios {
 	public String nombre;
 	public int edad;
 	public int antiguedad;
-	
-	public Socios(String nombre, int edad, int antiguedad) {
+	public double cuota;
+
+	public Socios(String nombre, int edad, int antiguedad, double cuota) {
+		super();
 		this.nombre = nombre;
 		this.edad = edad;
 		this.antiguedad = antiguedad;
+		this.cuota = cuota;
 	}
 
 	public String getNombre() {
@@ -35,11 +38,17 @@ public class Socios {
 		this.antiguedad = antiguedad;
 	}
 
+	public double getCuota() {
+		return cuota;
+	}
+
+	public void setCuota(double cuota) {
+		this.cuota = cuota;
+	}
+
 	@Override
 	public String toString() {
-		return "Socios [nombre=" + nombre + ", edad=" + edad + ", antiguedad=" + antiguedad + "]";
+		return "Socios [nombre=" + nombre + ", edad=" + edad + ", antiguedad=" + antiguedad + ", cuota=" + cuota + "]";
 	}
-	
-	
-	
+
 }

@@ -3,7 +3,6 @@
     <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="ejercicio2Examen.Discos"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="herencia.Persona"/>
     <fullyQualifiedTypeName name="es.practica.poo.herencia.Persona"/>
     <fullyQualifiedTypeName name="es.practica.poo.herencia.Profesor"/>
@@ -15,4 +14,5 @@
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>
