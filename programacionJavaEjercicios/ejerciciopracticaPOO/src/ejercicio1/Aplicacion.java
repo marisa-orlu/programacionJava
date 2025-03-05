@@ -7,8 +7,6 @@ public class Aplicacion {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-		Biblioteca biblioteca = new Biblioteca();
-
 		int op = 0;
 
 		while (op != 5) {
@@ -24,6 +22,7 @@ public class Aplicacion {
 			switch (op) {
 			case 1: {
 				System.out.println("Has introducido uno para prestar el libro");
+				break;
 			}
 
 			case 3: {
