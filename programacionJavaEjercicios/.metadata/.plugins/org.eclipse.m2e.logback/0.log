@@ -308,3 +308,12 @@
 2025-03-05 09:42:02,695 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2025-03-05 16:22:21,670 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2025-03-05 16:23:02,490 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-03-06 09:16:51,623 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2025-03-06 11:23:52,339 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-12.0.12; built: 2024-07-25T21:58:37.668Z; git: cc6f1b74db755fed228b50701ad967aeaa68e83f; jvm 23.0.1+11-39
+2025-03-06 11:23:52,382 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started oeje8n.ContextHandler$CoreContextHandler@2f6400b{/help,/help,b=null,a=AVAILABLE,h=oeje8n.ContextHandler$CoreContextHandler$CoreToNestedHandler@2737747e{STARTED}}
+2025-03-06 11:23:52,383 [Start Help Server] INFO  o.e.j.s.DefaultSessionIdManager - Session workerName=node0
+2025-03-06 11:23:52,403 [Start Help Server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@4b86590{HTTP/1.1, (http/1.1)}{127.0.0.1:63083}
+2025-03-06 11:23:52,406 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started oejs.Server@5116f9ef{STARTING}[12.0.12,sto=0] @87171ms
+2025-03-06 11:25:01,451 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-03-06 13:54:57,371 [Stop Help Server] INFO  org.eclipse.jetty.server.Server - Stopped oejs.Server@5116f9ef{STOPPING}[12.0.12,sto=0]
+2025-03-06 13:54:57,375 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@4b86590{HTTP/1.1, (http/1.1)}{127.0.0.1:0}
