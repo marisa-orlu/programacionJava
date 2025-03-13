@@ -1,31 +1,27 @@
 package ejercicio2_2ArrayList;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Aplicacion {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		ArrayList<Alumno> listaExperienciaAlumnos = new ArrayList<>();
-		String nombre;
-		String nombreEmpresa;
-		int duracionSemanas;
-		String experienciaGeneral;
-		String nombreBuscar;
-//		Alumno alumno = new Alumno(nombre, nombreEmpresa, duracionSemanas, experienciaGeneral);
+		GestorExperiencias gestor = new GestorExperiencias();
+		String nombreBuscar, nombreAlumnoBuscar, nombreEliminar;
 		int op;
 
 		do {
 			System.out.println("""
+					-------------------------------------
 					1) Añadir una experiencia de práctica
 					2) Mostrar todas las experiencias registradas
 					3) Buscar experiencias por empresa
 					4) Filtrar experiencias por duración (por ejemplo, más de 4 semanas)
 					5) Modificar una experiencia existente
 					6) Eliminar una experiencia
-					7) Mostrar el top 3 de experiencias más largas
+					7) Mostrar el top 1 de experiencias más largas
 					0) Salir del programa
+					-------------------------------------
 
 					Introduce una opción
 					""");
@@ -33,32 +29,50 @@ public class Aplicacion {
 
 			switch (op) {
 			case 1:
-				agregarExperiencia();
+				System.out.println("Nombre del alumno: ");
+				String nombre = sc.next();
+				sc.nextLine();
+				System.out.println("Empresa: ");
+				String empresa = sc.nextLine();
+				sc.nextLine();
+				System.out.println("Duración en semanas: ");
+				int duracion = sc.nextInt();
+				sc.nextLine();
+				System.out.println("Experiencia general: ");
+				String experiencia = sc.nextLine();
+				gestor.agregarExperiencia(new AlumnoExperiencia(nombre, empresa, duracion, experiencia));
 				break;
 
 			case 2:
-				for (Alumno a : listaExperienciaAlumnos) {
-					System.out.println(alumno.mostarExperiencias());
-				}
-
+				gestor.mostrarExperiencias();
 				break;
 
 			case 3:
-				System.out.println("Introduce el nombre de la empresa para mostrar las experiencias");
+				System.out.println("Introduce la empresa");
 				nombreBuscar = sc.next();
-				alumno.encontrarContacto(nombreBuscar, listaExperienciaAlumnos);
+				gestor.buscarExperiencia(nombreBuscar);
 				break;
 
 			case 4:
+				gestor.experienciasFiltrar(4);
 				break;
 
 			case 5:
+				System.out.println("Introduce el nombre del alumno que quieras modificar: ");
+				nombreAlumnoBuscar = sc.next();
+
+				gestor.modificarExperiencia(nombreAlumnoBuscar);
 				break;
 
 			case 6:
+				System.out.println("Introduce el nombre del alumno que quieras eliminar");
+				nombreEliminar = sc.next();
+
+				gestor.borrarExp(nombreEliminar);
 				break;
 
 			case 7:
+				gestor.mostrarExperienciaMasLarga();
 				break;
 
 			case 0:
