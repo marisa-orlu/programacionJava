@@ -6,7 +6,6 @@
     <fullyQualifiedTypeName name="herencia.Persona"/>
     <fullyQualifiedTypeName name="es.practica.poo.herencia.Persona"/>
     <fullyQualifiedTypeName name="es.practica.poo.herencia.Profesor"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.lang.VerifyError"/>
     <fullyQualifiedTypeName name="es.practica.poo.polimorfismo.Vehiculo"/>
     <fullyQualifiedTypeName name="es.practica.poo.polimorfismo.Coche"/>
@@ -15,8 +14,9 @@
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="java.lang.Boolean"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthOptionPaneUI"/>
     <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>
