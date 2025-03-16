@@ -1,23 +1,25 @@
 package videojuegoBasico;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class personaje {
 
-	public String nombre;
-	public int saludActual;
-	public int saludMaxima;
-	public int resistenciaActual;
-	public int resistenciaMaxima;
-	public int nivel = 1;
-	public String clase;
-	public int puntos = 0;
-	public int ataque;
+	private String nombre;
+	private int saludActual;
+	private int saludMaxima;
+	private int resistenciaActual;
+	private int resistenciaMaxima;
+	private int nivel = 1;
+	private String clase;
+	private int puntos = 0;
+	private int ataque;
+	private ArrayList<Objeto> inventario;
 
 	public personaje() {
 		this.nombre = "Sakamoto";
 		this.saludActual = 100;
-		int saludMaxima = 250;
+		this.saludMaxima = 250;
 		this.resistenciaActual = 10;
 		this.resistenciaMaxima = 250;
 		this.nivel = 5;
@@ -27,8 +29,10 @@ public class personaje {
 	}
 
 	// Constructores
-	public personaje(String nombre, int saludActual, int saludMaxima, int resistencia, int nivel, String clase,
-			int ataque) {
+
+	public personaje(String nombre, int saludActual, int saludMaxima, int resistenciaActual, int resistenciaMaxima,
+			int nivel, String clase, int puntos, int ataque, ArrayList<Objeto> inventario) {
+		super();
 		this.nombre = nombre;
 		this.saludActual = saludActual;
 		this.saludMaxima = saludMaxima;
@@ -36,7 +40,9 @@ public class personaje {
 		this.resistenciaMaxima = resistenciaMaxima;
 		this.nivel = nivel;
 		this.clase = clase;
+		this.puntos = puntos;
 		this.ataque = ataque;
+		this.inventario = inventario;
 	}
 
 	// set and get
@@ -102,6 +108,14 @@ public class personaje {
 
 	public void setAtaque(int ataque) {
 		this.ataque = ataque;
+	}
+
+	public ArrayList<Objeto> getInventario() {
+		return inventario;
+	}
+
+	public void setInventario(ArrayList<Objeto> inventario) {
+		this.inventario = inventario;
 	}
 
 	// METODOS:
@@ -177,7 +191,8 @@ public class personaje {
 	public String toString() {
 		return "personaje [nombre=" + nombre + ", saludActual=" + saludActual + ", saludMaxima=" + saludMaxima
 				+ ", resistenciaActual=" + resistenciaActual + ", resistenciaMaxima=" + resistenciaMaxima + ", nivel="
-				+ nivel + ", clase=" + clase + ", puntos=" + puntos + ", ataque=" + ataque + "]";
+				+ nivel + ", clase=" + clase + ", puntos=" + puntos + ", ataque=" + ataque + ", inventario="
+				+ inventario + "]";
 	}
 
 }

@@ -12,7 +12,7 @@ public class main {
 		// funcionalidades.recibirDaño(70, personaje);
 
 		System.out.println("------------JUEGO BASICO------------");
-		System.out.println("Bienvenido a este juego " + p1.nombre);
+		System.out.println("Bienvenido a este juego " + p1.getNombre());
 		System.out.println("----------------Menu----------------");
 		System.out.println("1. Salud actual");
 		System.out.println("2. Pelea");
@@ -28,26 +28,26 @@ public class main {
 			switch (op) {
 
 			case 1: {
-				System.out.println("Salud inicial de " + p1.nombre + ": " + p1.getSaludActual());
+				System.out.println("Salud inicial de " + p1.getNombre() + ": " + p1.getSaludActual());
 				System.out.println();
 				break;
 			}
 
 			case 2: {
-				System.out.println("" + p1.nombre + " vamos a pelear un rato\n");
+				System.out.println("" + p1.getNombre() + " vamos a pelear un rato\n");
 				p1.recibirDaño();
 
 				System.out.println();
-				System.out.println("" + p1.nombre + " acabaste la pelea\n");
+				System.out.println("" + p1.getNombre() + " acabaste la pelea\n");
 
-				System.out.println("" + p1.nombre + " ha ganado puntos tras la pelea");
-				p1.ganarPuntos(p1.puntos);
+				System.out.println("" + p1.getNombre() + " ha ganado puntos tras la pelea");
+				p1.ganarPuntos(p1.getPuntos());
 				System.out.println();
 				break;
 			}
 
 			case 3: {
-				System.out.println("" + p1.nombre + " ahora toca curarse y descansar\n");
+				System.out.println("" + p1.getNombre() + " ahora toca curarse y descansar\n");
 
 				p1.Curarse();
 
@@ -68,7 +68,7 @@ public class main {
 			}
 
 			case 0: {
-				System.out.println("Hasta luego " + p1.nombre + " nos vemos pronto :(( te echaré de menos...");
+				System.out.println("Hasta luego " + p1.getNombre() + " nos vemos pronto :(( te echaré de menos...");
 				break;
 			}
 			default: {
