@@ -58,8 +58,8 @@ public class Objeto {
 
 	@Override
 	public String toString() {
-		return "Objeto [idObjeto=" + idObjeto + ", nombreObjeto=" + nombreObjeto + ", peso=" + peso + ", valor=" + valor
-				+ ", descripcion=" + descripcion + "]";
+		return "Objeto: " + nombreObjeto + "\n" + "ID: " + idObjeto + "\n" + "Peso: " + peso + " kg\n" + "Valor: "
+				+ valor + " monedas\n" + "Descripción: " + descripcion;
 	}
 
 }

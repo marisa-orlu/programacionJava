@@ -10,11 +10,16 @@ public class Main {
 		ArrayList<Objeto> inventario1 = new ArrayList<Objeto>();
 		ArrayList<Objeto> inventario2 = new ArrayList<Objeto>();
 		int op = 0;
-		int nombrePersonaje;
+		int nombrePersonaje; // Opcion para entrar en el switch donde se elige el personaje
 
+// 		Creacion de objetos para despues añadirlo en el arrayList de inventario
 		Objeto objeto = new Objeto(1, "Escudo", 15.0, 5.5, "Escudo fuerte");
 		inventario1.add(objeto);
-		Objeto objeto2 = new Objeto(2, "Poción", 2.0, 7.5, "Poción curativa");
+		Objeto objeto3 = new Objeto(2, "Venda", 2.2, 7.5, "Venda");
+		inventario1.add(objeto3);
+
+// 		Creacion de otro objeto para otro personaje para el inventario2(ArrayList)
+		Objeto objeto2 = new Objeto(1, "Poción", 2.0, 7.5, "Poción curativa");
 		inventario2.add(objeto2);
 
 //		Esta es otra forma de realizar una lita, y realizacion de un lambda aqunue no se utilizará, solo para probarlo :) 		

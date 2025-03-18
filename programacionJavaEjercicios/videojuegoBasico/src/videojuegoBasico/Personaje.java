@@ -10,9 +10,9 @@ public class Personaje {
 	private int saludMaxima;
 	private int resistenciaActual;
 	private int resistenciaMaxima;
-	private int nivel = 1;
+	private int nivel;
 	private String clase;
-	private double puntos = 0;
+	private double puntos;
 	private int ataque;
 	private ArrayList<Objeto> inventario;
 
@@ -126,7 +126,7 @@ public class Personaje {
 		saludActual -= dañoFinal;
 
 		if (saludActual < 0) {
-			System.out.println("" + nombre + " has muerto...");
+			System.out.println("GAME OVER " + nombre);
 			saludActual = 0;
 		}
 		System.out.println(nombre + " ha recibido " + dañoFinal + " de daño");
@@ -138,7 +138,7 @@ public class Personaje {
 
 	public void Curarse() {
 		Random random = new Random();
-		int aumentoSalud = random.nextInt(51);
+		int aumentoSalud = random.nextInt(51); // Cura un numero random
 
 		saludActual += aumentoSalud;
 
@@ -178,10 +178,17 @@ public class Personaje {
 
 	public void pesoInventario(ArrayList<Objeto> inventario) {
 		double sumaInventario = 0;
+		System.out.println("┌───────────────────────────┐");
+		System.out.println("│         INVENTARIO        │");
+		System.out.println("└───────────────────────────┘");
 
 		for (Objeto obj : inventario) {
 			sumaInventario = obj.getPeso() + sumaInventario;
+			System.out.println(obj);
 		}
+
+		System.out.println("└───────────────────────────┘");
+
 		if (sumaInventario >= 0 && sumaInventario <= 15) {
 			System.out.println("El peso del inventario es: " + sumaInventario);
 			System.out.println("El inventario tiene una carga ligera");
@@ -197,10 +204,10 @@ public class Personaje {
 
 	@Override
 	public String toString() {
-		return "personaje [nombre=" + nombre + ", saludActual=" + saludActual + ", saludMaxima=" + saludMaxima
-				+ ", resistenciaActual=" + resistenciaActual + ", resistenciaMaxima=" + resistenciaMaxima + ", nivel="
-				+ nivel + ", clase=" + clase + ", puntos=" + puntos + ", ataque=" + ataque + ", inventario="
-				+ inventario + "]";
+		return "Personaje {" + "nombre='" + nombre + '\'' + ", saludActual=" + saludActual + ", saludMaxima="
+				+ saludMaxima + ", resistenciaActual=" + resistenciaActual + ", resistenciaMaxima=" + resistenciaMaxima
+				+ ", nivel=" + nivel + ", clase='" + clase + '\'' + ", puntos=" + puntos + ", ataque=" + ataque
+				+ ", inventario=" + inventario + '}';
 	}
 
 }
