@@ -9,6 +9,7 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		ArrayList<Fruta> listaFrutas = new ArrayList<Fruta>();
 		Fruteria frutas = new Fruteria(listaFrutas);
+
 		int op = 0;
 
 		do {
@@ -37,7 +38,7 @@ public class Main {
 				System.out.println("Introduce el nombre de la fruta que quieras buscar");
 				String nombreBuscar = sc.next();
 
-				frutas.buscarFruta(nombreBuscar);
+				System.out.println(frutas.buscarFruta(nombreBuscar));
 				break;
 
 			case 4:
@@ -53,7 +54,13 @@ public class Main {
 
 			case 5:
 				frutas.ordenarFrutas();
-				System.out.println("Lista de frutas ordenada");
+				frutas.mostrarFruta();
+				// System.out.println("Lista de frutas Modificada");
+
+				break;
+
+			case 6:
+				frutas.buscarFrutaOferta();
 				break;
 			default:
 				System.out.println("Opción no válida");

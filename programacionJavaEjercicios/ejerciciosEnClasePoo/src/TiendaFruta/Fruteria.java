@@ -42,12 +42,9 @@ public class Fruteria {
 
 		for (Fruta fruta : inventario) {
 			if (fruta.getNombre().equalsIgnoreCase(nombre)) {
-				System.out.println("Producto encontrado: " + nombre);
-
 				return "Fruta encontrada: " + nombre;
 			}
 		}
-
 		return "No se ha encontrado ese producto";
 
 	}
@@ -71,31 +68,6 @@ public class Fruteria {
 		}
 	}
 
-//	public void ordenarFruta() {
-//		// Hacer un for para hacer el metodo burbuja, comparando los dos valores si son
-//		// iguales se quedan iguales
-//		Fruta[] arrayFrutas = inventario.toArray(new Fruta[0]);
-//		boolean intercambio = false;
-//
-//		for (int i = 0; i < arrayFrutas.length - 1; i++) {
-//			intercambio = false;
-//
-//			for (int j = 0; j < arrayFrutas.length - 1 - i; j++) {
-//				if (arrayFrutas[j].getPrecio() < arrayFrutas[j + 1].getPrecio()) {
-//					Fruta temp = arrayFrutas[j + 1];
-//					arrayFrutas[j] = arrayFrutas[j + 1];
-//					arrayFrutas[j + 1] = temp;
-//
-//					intercambio = true;
-//				}
-//			}
-//
-//		}
-//		if (!intercambio) {
-//		}
-//
-//	}
-
 	public void ordenarFrutas() {
 		for (int i = 0; i < inventario.size(); i++) {
 			for (int j = 0; j < inventario.size() - (i + 1); j++) {
@@ -107,10 +79,8 @@ public class Fruteria {
 							primeraFruta.getProcedencia(), primeraFruta.getPrecio(), primeraFruta.getStock());
 
 					inventario.set(j, segundaFruta);
-					inventario.set(j, frutaAux);
+					inventario.set(j + 1, frutaAux);
 
-					System.out.println("---Mostrando la lista ordenada---");
-					System.out.println("" + inventario);
 				}
 
 			}
@@ -118,10 +88,17 @@ public class Fruteria {
 
 	}
 
-	public void buscarFrutaOferta() {
-		for(Fruta fruta : inventario) {
-			if()
+	public ArrayList<Fruta> buscarFrutaOferta() {
+		ArrayList<Fruta> oferta = new ArrayList<Fruta>();
+		for (Fruta fruta : inventario) {
+			if (fruta.getPrecio() < 2) {
+				oferta.add(fruta);
+			}
 		}
-	}
+		if (oferta.isEmpty()) {
+			System.out.println("No hay ninguna oferta");
+		}
 
+		return oferta;
+	}
 }
