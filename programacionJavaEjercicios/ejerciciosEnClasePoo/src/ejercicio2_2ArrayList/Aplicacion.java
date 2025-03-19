@@ -72,7 +72,7 @@ public class Aplicacion {
 				break;
 
 			case 7:
-				gestor.mostrarExperienciaMasLarga();
+				gestor.mostrarTop3Experiencias();
 				break;
 
 			case 0:

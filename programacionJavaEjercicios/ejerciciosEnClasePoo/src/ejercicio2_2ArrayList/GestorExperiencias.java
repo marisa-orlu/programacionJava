@@ -100,22 +100,52 @@ public class GestorExperiencias {
 		}
 	}
 
-	public void mostrarExperienciaMasLarga() {
+//	public void mostrarExperienciaMasLarga() {
+//		if (listaExperiencia.isEmpty()) {
+//			System.out.println("No hay experiencias registradas.");
+//			return;
+//		}
+//
+//		AlumnoExperiencia experienciaMasLarga = listaExperiencia.get(0);
+//
+//		for (AlumnoExperiencia experiencia : listaExperiencia) {
+//			if (experiencia.getDuracionSemanas() > experienciaMasLarga.getDuracionSemanas()) {
+//				experienciaMasLarga = experiencia;
+//			}
+//		}
+//
+//		System.out.println("\n--- Experiencia mas larga ---");
+//		System.out.println(experienciaMasLarga);
+//	}
+
+	public void mostrarTop3Experiencias() {
+
 		if (listaExperiencia.isEmpty()) {
 			System.out.println("No hay experiencias registradas.");
 			return;
 		}
 
-		AlumnoExperiencia experienciaMasLarga = listaExperiencia.get(0);
-
-		for (AlumnoExperiencia experiencia : listaExperiencia) {
-			if (experiencia.getDuracionSemanas() > experienciaMasLarga.getDuracionSemanas()) {
-				experienciaMasLarga = experiencia;
+		for (int i = 0; i < listaExperiencia.size() - 1; i++) {
+			for (int j = 0; j < listaExperiencia.size() - i - 1; j++) {
+				if (listaExperiencia.get(j).getDuracionSemanas() < listaExperiencia.get(j + 1).getDuracionSemanas()) {
+					AlumnoExperiencia temp = listaExperiencia.get(j);
+					listaExperiencia.set(j, listaExperiencia.get(j + 1));
+					listaExperiencia.set(j + 1, temp);
+				}
 			}
 		}
 
-		System.out.println("\n--- Experiencia mas larga ---");
-		System.out.println(experienciaMasLarga);
+		System.out.println("Top 3 experiencias más largas:");
+
+		for (int i = 0; i < 3 && i < listaExperiencia.size(); i++) {
+			AlumnoExperiencia experiencia = listaExperiencia.get(i);
+
+			System.out.println((i + 1) + ". Nombre del alumno: " + experiencia.getNombre() + ". Empresa: "
+					+ experiencia.getNombreEmpresa() + ". Semanas: " + experiencia.getNombreEmpresa()
+					+ ". Descripción de la experiencia: " + experiencia.getExperienciaGeneral());
+			System.out.println(" ");
+
+		}
 	}
 
 }

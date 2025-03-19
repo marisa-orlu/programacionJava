@@ -88,6 +88,23 @@ public class Fruteria {
 
 	}
 
+	public void ordenar() {
+		for (int i = 0; i < inventario.size(); i++) {
+			for (int j = 0; j < inventario.size() - (i - 1); j++) {
+				Fruta primeraFruta = inventario.get(j);
+				Fruta segundaFruta = inventario.get(j + 1);
+
+				if (primeraFruta.getPrecio() > segundaFruta.getPrecio()) {
+					Fruta frutaAux = new Fruta(primeraFruta.getCodigoBarras(), primeraFruta.getNombre(),
+							primeraFruta.getProcedencia(), primeraFruta.getPrecio(), primeraFruta.getStock());
+
+					inventario.set(j, segundaFruta);
+					inventario.set(j + 1, frutaAux);
+				}
+			}
+		}
+	}
+
 	public ArrayList<Fruta> buscarFrutaOferta() {
 		ArrayList<Fruta> oferta = new ArrayList<Fruta>();
 		for (Fruta fruta : inventario) {
