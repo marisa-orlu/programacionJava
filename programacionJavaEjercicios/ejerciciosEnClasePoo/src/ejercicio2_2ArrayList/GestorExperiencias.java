@@ -148,4 +148,37 @@ public class GestorExperiencias {
 		}
 	}
 
+	public void mostrarTop3Experiencia() {
+		if (listaExperiencia.isEmpty()) {
+			System.out.println("No hay experiencias registradas.");
+			return;
+		}
+
+		// Ordenar la lista usando el algoritmo de burbuja
+		for (int i = 0; i < listaExperiencia.size(); i++) {
+			for (int j = 0; j < listaExperiencia.size() - (i + 1); j++) {
+				AlumnoExperiencia expActual = listaExperiencia.get(j);
+				AlumnoExperiencia expSiguiente = listaExperiencia.get(j + 1);
+
+				if (expActual.getDuracionSemanas() < expSiguiente.getDuracionSemanas()) {
+					// Intercambiar usando un objeto auxiliar
+					AlumnoExperiencia temp = new AlumnoExperiencia(expActual.getNombre(), expActual.getNombreEmpresa(),
+							expActual.getDuracionSemanas(), expActual.getExperienciaGeneral());
+
+					listaExperiencia.set(j, expSiguiente);
+					listaExperiencia.set(j + 1, temp);
+				}
+			}
+		}
+
+		System.out.println("Top 3 experiencias más largas:");
+		for (int i = 0; i < 3 && i < listaExperiencia.size(); i++) {
+			AlumnoExperiencia experiencia = listaExperiencia.get(i);
+			System.out.println((i + 1) + ". Nombre del alumno: " + experiencia.getNombre() + ". Empresa: "
+					+ experiencia.getNombreEmpresa() + ". Semanas: " + experiencia.getDuracionSemanas()
+					+ ". Descripción de la experiencia: " + experiencia.getExperienciaGeneral());
+			System.out.println();
+		}
+	}
+
 }
