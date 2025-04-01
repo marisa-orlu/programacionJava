@@ -11,14 +11,15 @@
     <fullyQualifiedTypeName name="es.practica.poo.polimorfismo.Coche"/>
     <fullyQualifiedTypeName name="es.practica.poo.polimorfismo.Moto"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="java.lang.Boolean"/>
     <fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthOptionPaneUI"/>
     <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.Comparator"/>
-    <fullyQualifiedTypeName name="java.nio.file.spi.FileSystemProvider"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.nio.file.spi.FileSystemProvider"/>
 </qualifiedTypeNameHistroy>
