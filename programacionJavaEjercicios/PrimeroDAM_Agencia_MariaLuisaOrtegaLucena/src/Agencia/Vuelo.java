@@ -13,9 +13,9 @@ public final class Vuelo extends ServicioTuristico {
 		this.tasaAeroportuaria = tasaAeroportuaria;
 	}
 
-//	@Override
-//	public float calcularPrecioFinal() {
-//		return precioBase + tasaAeroportuaria + (precioBase * IVA);
-//	}
+	public float calcularPrecioFinal() {
+		float IVA = 21;
+		return precioBase + tasaAeroportuaria + (precioBase * IVA);
+	}
 
 }

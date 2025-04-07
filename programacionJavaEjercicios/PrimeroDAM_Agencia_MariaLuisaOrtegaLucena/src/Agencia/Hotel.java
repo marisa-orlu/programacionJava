@@ -11,4 +11,25 @@ public class Hotel extends ServicioTuristico {
 		this.suplementoDesayuno = suplementoDesayuno;
 	}
 
+	public int getNoches() {
+		return noches;
+	}
+
+	public void setNoches(int noches) {
+		this.noches = noches;
+	}
+
+	public float getSuplementoDesayuno() {
+		return suplementoDesayuno;
+	}
+
+	public void setSuplementoDesayuno(float suplementoDesayuno) {
+		this.suplementoDesayuno = suplementoDesayuno;
+	}
+
+	public float calcularPrecioFinal() {
+		float IVA = 21;
+		return precioBase * noches + suplementoDesayuno + (precioBase * IVA);
+	}
+
 }
