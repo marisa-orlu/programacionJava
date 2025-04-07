@@ -32,6 +32,7 @@ public class Excursion extends ServicioTuristico {
 		return "Excursion [incluyeGuia=" + incluyeGuia + ", costeGuia=" + costeGuia + "]";
 	}
 
+	@Override
 	public float calcularPrecioFinal() {
 		float IVA = 21;
 		if (incluyeGuia) {

@@ -2,12 +2,12 @@ package Agencia;
 
 import java.util.ArrayList;
 
-public class CatalogoServicios {
+public class CatalogoServicios implements Listable {
 	protected ArrayList<ServicioTuristico> lista;
 
-	public CatalogoServicios(ArrayList<ServicioTuristico> lista) {
+	public CatalogoServicios() {
 		super();
-		this.lista = lista;
+		this.lista = new ArrayList<>();
 	}
 
 	public ArrayList<ServicioTuristico> getLista() {
@@ -62,6 +62,19 @@ public class CatalogoServicios {
 				System.out.println(" -" + servicio);
 			}
 		}
+	}
+
+	@Override
+	public void mostrarCatalogoConPrecios() {
+		if (lista.isEmpty()) {
+			System.out.println("Lista vacia");
+		} else {
+			System.out.println("Mostrando lista de servicios");
+			for (ServicioTuristico servicio : lista) {
+				System.out.println(" -" + servicio);
+			}
+		}
+
 	}
 
 }

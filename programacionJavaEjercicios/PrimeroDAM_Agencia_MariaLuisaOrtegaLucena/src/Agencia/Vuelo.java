@@ -13,6 +13,7 @@ public final class Vuelo extends ServicioTuristico {
 		this.tasaAeroportuaria = tasaAeroportuaria;
 	}
 
+	@Override
 	public float calcularPrecioFinal() {
 		float IVA = 21;
 		return precioBase + tasaAeroportuaria + (precioBase * IVA);

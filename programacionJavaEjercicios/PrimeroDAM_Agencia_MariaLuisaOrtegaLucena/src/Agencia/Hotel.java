@@ -27,6 +27,7 @@ public class Hotel extends ServicioTuristico {
 		this.suplementoDesayuno = suplementoDesayuno;
 	}
 
+	@Override
 	public float calcularPrecioFinal() {
 		float IVA = 21;
 		return precioBase * noches + suplementoDesayuno + (precioBase * IVA);

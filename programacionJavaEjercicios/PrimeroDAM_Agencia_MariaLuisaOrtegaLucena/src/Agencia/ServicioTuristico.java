@@ -74,6 +74,6 @@ public abstract class ServicioTuristico {
 				+ fechaInicio + "]";
 	}
 
-//	public abstract float calcularPrecioFinal();
+	public abstract float calcularPrecioFinal();
 
 }
