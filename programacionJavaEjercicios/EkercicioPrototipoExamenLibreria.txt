@@ -1,0 +1,77 @@
+📘 Práctica de Examen: Librería Digital
+
+La práctica debe desarrollarse en un proyecto Java con el nombre:
+
+1DAM_Libreria_nombre_apellidos
+
+El proyecto debe estar perfectamente estructurado en paquetes, y todas las funcionalidades deben funcionar sin errores. No se permite el uso de conexión a internet ni de librerías externas. El fichero final será entregado comprimido en formato ZIP.
+
+a) Estructura básica del proyecto Crea un proyecto con nombre 1DAM_Libreria_nombre_apellidos.
+
+Crea la clase principal Inicio, con un método main, y úsala exclusivamente para lanzar la aplicación mediante una llamada a un método estático iniciarAplicacion() de la clase gestora.
+
+b) Clases de modelo Publicacion (abstracta) Contiene información común a cualquier publicación:
+
+String codigo, String titulo, String autor, float precioBase, int stock, String fechaPublicacion
+
+Incluye constructores, getters, setters y un método toString() adecuado.
+
+-Libro (final) Extiende de Publicacion. Añade:
+
+int numeroPaginas, boolean tapaDura
+
+El precio final se calcula como:
+
+precioBase + (si tapaDura es verdadero, entonces 5.0, de lo contrario 0.0) + IVA (10%)
+
+-Revista Extiende de Publicacion. Añade:
+
+int numeroEjemplar, boolean coleccionable
+
+IVA del 4%. El precio final se calcula como:
+
+precioBase + (si coleccionable es verdadero, entonces 1.5, de lo contrario 0.0) + IVA
+
+-Audiolibro Extiende de Publicacion. Añade:
+
+int duracionMinutos, boolean narradoPorAutor
+
+IVA del 21%. Si está narrado por el autor, se suma 2.0€ al precio base.
+
+-CatalogoPublicaciones Clase que contiene un ArrayList<Publicacion>. Implementa la interfaz Listable. Debe permitir:
+
+Añadir publicaciones
+
+Buscar por código o por texto contenido en el título
+
+Eliminar publicaciones
+
+Obtener listado completo
+
+Interfaz Listable Define el método mostrarCatalogoConPrecios().
+
+Este método debe mostrar en formato tabla todos los elementos, indicando tipo, precio base, precio final y stock.
+
+c) Lógica de aplicación Crea la clase Libreria, que contiene una única instancia estática de CatalogoPublicaciones.
+
+La clase tendrá solo métodos estáticos y será el punto de entrada a la lógica de negocio.
+
+Implementa el siguiente método:
+
+java
+Copiar
+Editar
+public static void iniciarAplicacion()
+Este método mostrará un menú principal que se repite hasta que el usuario decida salir. Las opciones deben estar implementadas en métodos independientes estáticos dentro de Libreria.
+
+d) Menú de usuario Opción 1: Añadir nueva publicación Permite añadir un libro, revista o audiolibro. El usuario elige y se le piden los datos necesarios.
+
+Opción 2: Buscar publicación por código o título Solicita un código o texto, y muestra los resultados coincidentes (tipo y resumen).
+
+Opción 3: Mostrar catálogo valorado Llama al método mostrarCatalogoConPrecios() del CatalogoPublicaciones.
+
+Opción 4: Eliminar publicación por código Permite eliminar una publicación indicando su código.
+
+Opción 5: Listar publicaciones ordenadas por fecha Muestra todas las publicaciones ordenadas ascendentemente por fechaPublicacion.
+
+Opción 6: Salir de la aplicación
