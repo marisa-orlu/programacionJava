@@ -28,11 +28,25 @@ public final class Libro extends Publicacion {
 	}
 
 	@Override
+	public String toString() {
+		return "Publicacion: " + super.toString() + "Libro [numeroPaginas=" + numeroPaginas + ", tapaDura=" + tapaDura
+				+ "]";
+	}
+
+	@Override
 	public double calcularPrecioFinal() {
 		// precioBase + (si tapaDura es verdadero, entonces 5.0, de lo contrario 0.0) +
 		// IVA (10%)
-		double a = 0;
-		return a;
+		double iva = 0.10;
+		if (tapaDura) {
+			precioBase = 5;
+			double subtotal = precioBase * iva;
+			return subtotal -= precioBase;
+		} else {
+			precioBase = 2;
+			double subtotal = precioBase * iva;
+			return subtotal -= precioBase;
+		}
 
 	}
 }
