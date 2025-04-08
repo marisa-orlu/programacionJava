@@ -21,6 +21,12 @@ public class Agencia {
 		int noches;
 		float suplementoDesayuno;
 		// Para excursiones
+		boolean incluyeGuia;
+		float costeGuia;
+		// codigo para buscar servicio
+		String codigo_servicio;
+		// codigo para borrar servicio
+		String codigo_borrar;
 
 		ServicioTuristico servicio;
 		CatalogoServicios catalogo = new CatalogoServicios();
@@ -35,6 +41,8 @@ public class Agencia {
 					Opción 4: Eliminar servicio por código
 					Opción 5: Listar servicios ordenados por fecha
 					Opción 0: Salir de la aplicación
+
+					Introduce una opción:
 					""");
 			op = sc.nextInt();
 			switch (op) {
@@ -45,7 +53,7 @@ public class Agencia {
 				System.out.println("""
 						1- Vuelos
 						2- Hotel
-						3- Hotel
+						3- Excursion
 						""");
 				int tipoServicio = sc.nextInt();
 
@@ -116,6 +124,33 @@ public class Agencia {
 					catalogo.aniadirServicios(servicio);
 					break;
 				case 3:
+					System.out.println("---Introduce los siguientes datos para la Excursion---");
+					System.out.println("Introduce el codigo: ");
+					codigo = sc.next();
+
+					System.out.println("Introduce la descripcion: ");
+					descripcion = sc.next();
+
+					System.out.println("Introduce el proveedor: ");
+					proveedor = sc.next();
+
+					System.out.println("Introduce las plazas disponibles: ");
+					plazasDisponibles = sc.nextInt();
+
+					System.out.println("Introduce el precio base: ");
+					precioBase = sc.nextFloat();
+
+					System.out.println("Introduce la fecha de inicio: ");
+					fechaInicio = sc.next();
+
+					System.out.println("Introduce (true/false) si incluye guia o no: ");
+					incluyeGuia = sc.hasNext();
+
+					System.out.println("Introduce suplemento Desayuno: ");
+					costeGuia = sc.nextFloat();
+
+					servicio = new Excursion(codigo, descripcion, proveedor, plazasDisponibles, precioBase, fechaInicio,
+							incluyeGuia, costeGuia);
 					break;
 
 				default:
@@ -124,12 +159,20 @@ public class Agencia {
 
 				break;
 			case 2:
+				System.out.println("Introduce el codigo de servicio que quieras buscar: ");
+				codigo_servicio = sc.next();
+
+				catalogo.buscarServicio(codigo_servicio);
 				break;
 			case 3:
+				catalogo.mostrarCatalogoConPrecios();
 				break;
 			case 4:
+				System.out.println("Introduce el codigo de servicio que quieras borrar: ");
+				codigo_borrar = sc.next();
 				break;
 			case 5:
+				catalogo.ordenarPorPrecioAscendente();
 				break;
 			default:
 				System.out.println("Opcion no valida...");

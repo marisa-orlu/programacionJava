@@ -5,7 +5,7 @@ public abstract class ServicioTuristico {
 	protected String descripcion;
 	protected String proveedor;
 	protected int plazasDisponibles;
-	protected float precioBase;
+	protected double precioBase;
 	protected String fechaInicio;
 
 	public ServicioTuristico(String codigo, String descripcion, String proveedor, int plazasDisponibles,
@@ -51,7 +51,7 @@ public abstract class ServicioTuristico {
 		this.plazasDisponibles = plazasDisponibles;
 	}
 
-	public float getPrecioBase() {
+	public double getPrecioBase() {
 		return precioBase;
 	}
 
@@ -74,6 +74,6 @@ public abstract class ServicioTuristico {
 				+ fechaInicio + "]";
 	}
 
-	public abstract float calcularPrecioFinal();
+	public abstract double calcularPrecioFinal();
 
 }

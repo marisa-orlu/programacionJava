@@ -2,7 +2,7 @@ package Agencia;
 
 public class Excursion extends ServicioTuristico {
 	protected boolean incluyeGuia;
-	protected float costeGuia;
+	protected double costeGuia;
 
 	public Excursion(String codigo, String descripcion, String proveedor, int plazasDisponibles, float precioBase,
 			String fechaInicio, boolean incluyeGuia, float costeGuia) {
@@ -19,7 +19,7 @@ public class Excursion extends ServicioTuristico {
 		this.incluyeGuia = incluyeGuia;
 	}
 
-	public float getCosteGuia() {
+	public double getCosteGuia() {
 		return costeGuia;
 	}
 
@@ -29,18 +29,21 @@ public class Excursion extends ServicioTuristico {
 
 	@Override
 	public String toString() {
-		return "Excursion [incluyeGuia=" + incluyeGuia + ", costeGuia=" + costeGuia + "]";
+		return "Servicio: " + super.toString() + "Excursion [incluyeGuia=" + incluyeGuia + ", costeGuia=" + costeGuia
+				+ "]";
 	}
 
 	@Override
-	public float calcularPrecioFinal() {
-		float IVA = 21;
-		if (incluyeGuia) {
-			return precioBase + costeGuia + (precioBase * IVA);
-		} else {
-			return precioBase + (precioBase * IVA);
-		}
+	public double calcularPrecioFinal() {
+		double IVA = 0.4;
+		double subtotal = precioBase;
 
+		if (incluyeGuia) {
+			return subtotal + (subtotal * IVA);
+		} else {
+			subtotal += costeGuia;
+			return subtotal + (subtotal * IVA);
+		}
 	}
 
 }

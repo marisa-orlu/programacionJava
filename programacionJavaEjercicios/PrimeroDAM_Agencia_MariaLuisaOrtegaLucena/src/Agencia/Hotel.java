@@ -1,8 +1,9 @@
 package Agencia;
 
 public class Hotel extends ServicioTuristico {
+
 	protected int noches;
-	protected float suplementoDesayuno;
+	protected double suplementoDesayuno;
 
 	public Hotel(String codigo, String descripcion, String proveedor, int plazasDisponibles, float precioBase,
 			String fechaInicio, int noches, float suplementoDesayuno) {
@@ -19,7 +20,7 @@ public class Hotel extends ServicioTuristico {
 		this.noches = noches;
 	}
 
-	public float getSuplementoDesayuno() {
+	public double getSuplementoDesayuno() {
 		return suplementoDesayuno;
 	}
 
@@ -28,9 +29,17 @@ public class Hotel extends ServicioTuristico {
 	}
 
 	@Override
-	public float calcularPrecioFinal() {
-		float IVA = 21;
-		return precioBase * noches + suplementoDesayuno + (precioBase * IVA);
+	public String toString() {
+
+		return "Servicio: " + super.toString() + "Hotel [noches=" + noches + ", suplementoDesayuno="
+				+ suplementoDesayuno + "]";
+	}
+
+	@Override
+	public double calcularPrecioFinal() {
+		double IVA = 0.21;
+		double subtotal = precioBase * noches + suplementoDesayuno;
+		return subtotal + (subtotal * IVA);
 	}
 
 }

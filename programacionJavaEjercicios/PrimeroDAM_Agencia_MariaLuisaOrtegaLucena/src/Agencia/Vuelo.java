@@ -3,7 +3,7 @@ package Agencia;
 public final class Vuelo extends ServicioTuristico {
 	protected String aeropuertoSalida;
 	protected String aeropuertoLlegada;
-	protected float tasaAeroportuaria;
+	protected double tasaAeroportuaria;
 
 	public Vuelo(String codigo, String descripcion, String proveedor, int plazasDisponibles, float precioBase,
 			String fechaInicio, String aeropuertoSalida, String aeropuertoLlegada, float tasaAeroportuaria) {
@@ -14,9 +14,16 @@ public final class Vuelo extends ServicioTuristico {
 	}
 
 	@Override
-	public float calcularPrecioFinal() {
-		float IVA = 21;
-		return precioBase + tasaAeroportuaria + (precioBase * IVA);
+	public double calcularPrecioFinal() {
+		double IVA = 0.21;
+		double subtotal = precioBase + tasaAeroportuaria;
+		return subtotal + (subtotal * IVA);
+	}
+
+	@Override
+	public String toString() {
+		return "Servicio: " + super.toString() + "Vuelo [aeropuertoSalida=" + aeropuertoSalida + ", aeropuertoLlegada="
+				+ aeropuertoLlegada + ", tasaAeroportuaria=" + tasaAeroportuaria + "]";
 	}
 
 }
