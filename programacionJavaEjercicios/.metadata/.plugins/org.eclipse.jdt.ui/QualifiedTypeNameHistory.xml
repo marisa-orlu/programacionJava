@@ -24,8 +24,11 @@
     <fullyQualifiedTypeName name="Ejercicio5Empleado.Vendedor"/>
     <fullyQualifiedTypeName name="Agencia.ServicioTuristico"/>
     <fullyQualifiedTypeName name="Libreria.Publicacion"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.lang.Override"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="Lógica.Clinica"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="javax.annotation.processing.SupportedSourceVersion"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="Gestion.Gestion"/>
+    <fullyQualifiedTypeName name="ClasesPapeleria.Libro"/>
 </qualifiedTypeNameHistroy>
