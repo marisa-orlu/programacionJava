@@ -29,7 +29,7 @@ public class Agencia {
 		String codigo_borrar;
 
 		ServicioTuristico servicio;
-		CatalogoServicios catalogo = new CatalogoServicios();
+
 		Scanner sc = new Scanner(System.in);
 		// Menu
 		int op = 0;
@@ -90,7 +90,7 @@ public class Agencia {
 					servicio = new Vuelo(codigo, descripcion, proveedor, plazasDisponibles, precioBase, fechaInicio,
 							aeropuertoSalida, aeropuertoLlegada, tasaAeroportuaria);
 
-					catalogo.aniadirServicios(servicio);
+					Agencia.catalogo.aniadirServicios(servicio);
 					break;
 				case 2:
 					System.out.println("---Introduce los siguientes datos para hotel---");

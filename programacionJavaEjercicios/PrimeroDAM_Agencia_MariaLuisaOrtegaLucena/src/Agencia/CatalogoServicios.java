@@ -90,11 +90,6 @@ public class CatalogoServicios implements Listable {
 				}
 			}
 		}
-
-		System.out.println("Lista ordenada por precio ascendente:");
-		for (ServicioTuristico servicio : lista) {
-			System.out.println(" -" + servicio);
-		}
 	}
 
 }
