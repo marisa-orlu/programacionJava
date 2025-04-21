@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-        <listEntry value="/PrimeroDAM_Agencia_MariaLuisaOrtegaLucena/src/Agencia/Main.java"/>
+        <listEntry value="/PracticasExpresionesLabda/src/Practica1/Main.java"/>
     </listAttribute>
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
         <listEntry value="1"/>
     </listAttribute>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_EXCLUDE_TEST_CODE" value="true"/>
-    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="Agencia.Main"/>
-    <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="PrimeroDAM_Agencia_MariaLuisaOrtegaLucena"/>
-    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="PrimeroDAM_Agencia_MariaLuisaOrtegaLucena"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="Practica1.Main"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="PracticasExpresionesLabda"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="PracticasExpresionesLabda"/>
 </launchConfiguration>
