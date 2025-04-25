@@ -25,6 +25,7 @@ public final class MaterialOficina extends Material {
 
 	public void setMargenVenta(double margenVenta) {
 		this.margenVenta = margenVenta;
+		calcularPrecio();
 	}
 
 	@Override
@@ -37,7 +38,7 @@ public final class MaterialOficina extends Material {
 	public double calcularPrecio() {
 		margenVenta = 0.12;
 		double subtotal = precioVenta * margenVenta;
-		double precioFinal = margenVenta + subtotal;
+		this.precioVenta = margenVenta + subtotal;
 		return precioFinal;
 	}
 
