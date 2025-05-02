@@ -4,9 +4,9 @@ public class IncidenciaPublica extends Incidencias {
 	private String tipo_infraestructura;
 	private boolean esCririca;
 
-	public IncidenciaPublica(int id_incidencia, String descripcion, String ubicacion, String fecha, String hora,
-			int nivel_incidencia, String tipo_infraestructura, boolean esCririca, int numeroPuntos) {
-		super(id_incidencia, descripcion, ubicacion, fecha, hora, nivel_incidencia, numeroPuntos);
+	public IncidenciaPublica(String descripcion, String ubicacion, String fecha, String hora, int nivel_incidencia,
+			String tipo_infraestructura, boolean esCririca, int numeroPuntos) {
+		super(descripcion, ubicacion, fecha, hora, nivel_incidencia, numeroPuntos);
 		this.tipo_infraestructura = tipo_infraestructura;
 		this.esCririca = esCririca;
 	}

@@ -5,10 +5,9 @@ public class IncidenciaDomestica extends Incidencias {
 	private int numeroPersonas;
 	private boolean tienenGenerador;
 
-	public IncidenciaDomestica(int id_incidencia, String descripcion, String ubicacion, String fecha, String hora,
-			int nivel_incidencia, String tipoIncidencia, int numeroPersonas, boolean tienenGenerador,
-			int numeroPuntos) {
-		super(id_incidencia, descripcion, ubicacion, fecha, hora, nivel_incidencia, numeroPuntos);
+	public IncidenciaDomestica(String descripcion, String ubicacion, String fecha, String hora, int nivel_incidencia,
+			String tipoIncidencia, int numeroPersonas, boolean tienenGenerador, int numeroPuntos) {
+		super(descripcion, ubicacion, fecha, hora, nivel_incidencia, numeroPuntos);
 		this.tipoIncidencia = tipoIncidencia;
 		this.numeroPersonas = numeroPersonas;
 		this.tienenGenerador = tienenGenerador;
@@ -46,16 +45,31 @@ public class IncidenciaDomestica extends Incidencias {
 
 	@Override
 	public void evaluarImpacto() {
+		int totalPuntos = 0;
 		if (numeroPersonas > 15) {
 			this.numeroPuntos += 10;
+			totalPuntos += this.numeroPuntos;
 		}
 
 		if (!tienenGenerador) {
-			this.numeroPuntos += 30;
+			this.numeroPuntos += 40;
+			totalPuntos += this.numeroPuntos;
+		} else {
+			this.numeroPuntos += 20;
+			totalPuntos += this.numeroPuntos;
 		}
 
-		if (nivel_incidencia > 3) {
-			this.numeroPuntos += 45;
+		if (totalPuntos > 75) {
+			nivel_incidencia = 5;
+		} else if (totalPuntos > 60) {
+			nivel_incidencia = 4;
+		} else if (totalPuntos > 45) {
+			nivel_incidencia = 3;
+		} else if (totalPuntos > 20) {
+			nivel_incidencia = 2;
+		} else if (totalPuntos > 10) {
+			nivel_incidencia = 1;
 		}
+
 	}
 }
