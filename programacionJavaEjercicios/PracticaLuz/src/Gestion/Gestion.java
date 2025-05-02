@@ -47,11 +47,20 @@ public class Gestion {
 		}
 	}
 
-//	public void evaluarTodas() {
-//		for (Incidencias i : listaIncidencias) {
-//			System.out.println("Impacto de la incidencia: " + i.getClass() + "" + i.getId_incidencia() + ": "
-//					+ i.getNumeroPuntos());
-//		}
-//	}
+	public void evaluarTodas() {
+		for (Incidencias i : listaIncidencias) {
+			i.evaluarImpacto();
+			String tipo = "";
+
+			if (i.getClass().getSimpleName().equals("IncidenciaDomestica")) {
+				tipo = "DOMÉSTICA";
+			} else if (i.getClass().getSimpleName().equals("IncidenciaPublica")) {
+				tipo = "PÚBLICA";
+			}
+
+			System.out.println("Impacto de la incidencia " + tipo + " " + i.getId_incidencia() + ": "
+					+ i.getNumeroPuntos() + " puntos");
+		}
+	}
 
 }

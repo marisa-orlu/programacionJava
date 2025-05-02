@@ -1,13 +1,14 @@
 package ClasesIncidencias;
 
 public class IncidenciaDomestica extends Incidencias {
+
 	private String tipoIncidencia;
 	private int numeroPersonas;
 	private boolean tienenGenerador;
 
-	public IncidenciaDomestica(String descripcion, String ubicacion, String fecha, String hora, int nivel_incidencia,
-			String tipoIncidencia, int numeroPersonas, boolean tienenGenerador, int numeroPuntos) {
-		super(descripcion, ubicacion, fecha, hora, nivel_incidencia, numeroPuntos);
+	public IncidenciaDomestica(String descripcion, String ubicacion, String fecha, String hora, String tipoIncidencia,
+			int numeroPersonas, boolean tienenGenerador) {
+		super(descripcion, ubicacion, fecha, hora);
 		this.tipoIncidencia = tipoIncidencia;
 		this.numeroPersonas = numeroPersonas;
 		this.tienenGenerador = tienenGenerador;
@@ -38,38 +39,36 @@ public class IncidenciaDomestica extends Incidencias {
 	}
 
 	@Override
-	public String toString() {
-		return "IncidenciaDomestica [tipoIncidencia=" + tipoIncidencia + ", numeroPersonas=" + numeroPersonas
-				+ ", tienenGenerador=" + tienenGenerador + "]";
+	public void evaluarImpacto() {
+		int puntos = 0;
+
+		puntos += numeroPersonas;
+
+		if (!tienenGenerador) {
+			puntos += 40;
+		} else {
+			puntos += 20;
+		}
+
+		this.numeroPuntos = puntos;
+
+		if (puntos > 75) {
+			this.nivel_incidencia = 5;
+		} else if (puntos > 60) {
+			this.nivel_incidencia = 4;
+		} else if (puntos > 45) {
+			this.nivel_incidencia = 3;
+		} else if (puntos > 20) {
+			this.nivel_incidencia = 2;
+		} else {
+			this.nivel_incidencia = 1;
+		}
 	}
 
 	@Override
-	public void evaluarImpacto() {
-		int totalPuntos = 0;
-		if (numeroPersonas > 15) {
-			this.numeroPuntos += 10;
-			totalPuntos += this.numeroPuntos;
-		}
-
-		if (!tienenGenerador) {
-			this.numeroPuntos += 40;
-			totalPuntos += this.numeroPuntos;
-		} else {
-			this.numeroPuntos += 20;
-			totalPuntos += this.numeroPuntos;
-		}
-
-		if (totalPuntos > 75) {
-			nivel_incidencia = 5;
-		} else if (totalPuntos > 60) {
-			nivel_incidencia = 4;
-		} else if (totalPuntos > 45) {
-			nivel_incidencia = 3;
-		} else if (totalPuntos > 20) {
-			nivel_incidencia = 2;
-		} else if (totalPuntos > 10) {
-			nivel_incidencia = 1;
-		}
-
+	public String toString() {
+		return "IncidenciaDomestica [ID=" + id_incidencia + ", tipoIncidencia=" + tipoIncidencia + ", numeroPersonas="
+				+ numeroPersonas + ", tienenGenerador=" + tienenGenerador + ", puntos=" + numeroPuntos + ", nivel="
+				+ nivel_incidencia + ", ubicacion=" + ubicacion + ", fecha=" + fecha + ", hora=" + hora + "]";
 	}
 }

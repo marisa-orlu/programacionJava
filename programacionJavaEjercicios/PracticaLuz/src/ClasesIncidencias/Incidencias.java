@@ -11,17 +11,16 @@ public abstract class Incidencias implements Evaluable {
 	protected int nivel_incidencia;
 	protected int numeroPuntos;
 
-	private int contadorId = 1;
+	private static int contadorId = 1;
 
-	public Incidencias(String descripcion, String ubicacion, String fecha, String hora, int numeroPuntos) {
-		super();
-		this.id_incidencia = generarIdIncidencia();
+	public Incidencias(String descripcion, String ubicacion, String fecha, String hora) {
+		this.id_incidencia = contadorId++;
 		this.descripcion = descripcion;
 		this.ubicacion = ubicacion;
 		this.fecha = fecha;
 		this.hora = hora;
-		this.nivel_incidencia = comprobarNivel();
-		this.numeroPuntos = this.numeroPuntos;
+		this.nivel_incidencia = 0;
+		this.numeroPuntos = 0;
 
 	}
 
@@ -81,10 +80,6 @@ public abstract class Incidencias implements Evaluable {
 		this.numeroPuntos = numeroPuntos;
 	}
 
-	private int generarIdIncidencia() {
-		return contadorId++;
-	}
-
 	@Override
 	public String toString() {
 		return "Incidencias [id_incidencia=" + id_incidencia + ", descripcion=" + descripcion + ", ubicacion="
@@ -93,12 +88,5 @@ public abstract class Incidencias implements Evaluable {
 
 	@Override
 	public abstract void evaluarImpacto();
-
-	public int comprobarNivel() {
-		if (this.nivel_incidencia > 5) {
-			this.nivel_incidencia = 5;
-		}
-		return this.nivel_incidencia;
-	}
 
 }
