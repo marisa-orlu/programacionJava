@@ -1,11 +1,11 @@
 package Gestion;
 
-import java.util.LinkedList;
+import java.util.Collections;
 import java.util.List;
 
 public class LineaBus {
 	private String nombre;
-	private List<String> paradas = new LinkedList<>();
+	private List<String> paradas;
 	private int frecuenciaMinutos;
 
 	public LineaBus(String nombre, List<String> paradas, int frecuenciaMinutos) {
@@ -54,12 +54,24 @@ public class LineaBus {
 	}
 
 	public void invertirRuta() {
-
+		Collections.reverse(paradas);
 	}
 
 	@Override
 	public String toString() {
 		return "LineaBus [nombre=" + nombre + ", paradas=" + paradas + ", frecuenciaMinutos=" + frecuenciaMinutos + "]";
+	}
+
+	public boolean contieneParada(String parada) {
+		return paradas.contains(parada);
+	}
+
+	public int numeroParadas() {
+		return paradas.size();
+	}
+
+	public String tipoEstructura() {
+		return paradas.getClass().getSimpleName();
 	}
 
 }

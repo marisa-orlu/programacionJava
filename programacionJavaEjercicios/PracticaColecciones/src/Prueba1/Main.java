@@ -28,7 +28,7 @@ public class Main {
 			LinkedList.add(0, i);
 		}
 		long finalLink = System.nanoTime();
-		System.out.println("ArrayList -> Tiempo de insercion" + "al principio: " + (finalLink - inicioLink) + "ns");
+		System.out.println("LinkedList -> Tiempo de insercion" + "al principio: " + (finalLink - inicioLink) + "ns");
 
 	}
 
