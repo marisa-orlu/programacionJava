@@ -2,6 +2,7 @@ package Clases;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Evento {
 	private String nombre;
@@ -9,7 +10,7 @@ public class Evento {
 
 	public Evento(String nombre) {
 		this.nombre = nombre;
-		this.participantes = new HashSet<>();
+		this.participantes = new TreeSet<>();
 	}
 
 	public String getNombre() {
@@ -18,6 +19,11 @@ public class Evento {
 
 	public Set<String> getParticipantes() {
 		return participantes;
+	}
+
+	@Override
+	public String toString() {
+		return "Evento [nombre=" + nombre + ", participantes=" + participantes + "]";
 	}
 
 	public void añadirParticipantes(String nombre) {
@@ -36,4 +42,20 @@ public class Evento {
 		}
 		return false;
 	}
+
+	public Set<String> primerosTresParticipantesOrdenados() {
+		Set<String> ordenados = new TreeSet<>(participantes);
+		Set<String> primerosTres = new HashSet<>();
+
+		int contador = 0;
+		for (String p : ordenados) {
+			if (contador >= 3)
+				break;
+			primerosTres.add(p);
+			contador++;
+		}
+
+		return primerosTres;
+	}
+
 }
