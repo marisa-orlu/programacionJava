@@ -57,7 +57,23 @@ public class GestorEventos {
 	public void mostrarResumen() {
 		System.out.println("Mostrando eventos: ");
 		for (Evento evento : eventos) {
-			System.out.println("-Evento: " + evento);
+			System.out.println(evento);
 		}
 	}
+
+	@Override
+	public String toString() {
+		return "GestorEventos [eventos=" + eventos + "]";
+	}
+
+	public void mostrarResumenConParticipantes() {
+		System.out.println("Resumen de eventos:");
+		for (Evento evento : eventos) {
+			System.out.println("Evento: " + evento.getNombre());
+			System.out.println("Número de participantes: " + evento.getParticipantes().size());
+			System.out.println("Primeros 3 participantes (ordenados): " + evento.primerosTresParticipantesOrdenados());
+			System.out.println("----------------------------");
+		}
+	}
+
 }

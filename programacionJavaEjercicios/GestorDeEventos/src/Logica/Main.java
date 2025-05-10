@@ -93,8 +93,7 @@ public class Main {
 
 		// Ejercicio 6
 		System.out.println("Resumen final: ");
-		gestor.mostrarResumen();
-		evento1.primerosTresParticipantesOrdenados();
+		gestor.mostrarResumenConParticipantes();
 
 	}
 }

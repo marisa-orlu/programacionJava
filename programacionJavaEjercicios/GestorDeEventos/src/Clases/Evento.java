@@ -23,7 +23,7 @@ public class Evento {
 
 	@Override
 	public String toString() {
-		return "Evento [nombre=" + nombre + ", participantes=" + participantes + "]";
+		return nombre + " - Participantes: " + participantes;
 	}
 
 	public void añadirParticipantes(String nombre) {
@@ -45,17 +45,17 @@ public class Evento {
 
 	public Set<String> primerosTresParticipantesOrdenados() {
 		Set<String> ordenados = new TreeSet<>(participantes);
-		Set<String> primerosTres = new HashSet<>();
+		Set<String> tresPrimer = new HashSet<>();
 
 		int contador = 0;
 		for (String p : ordenados) {
 			if (contador >= 3)
 				break;
-			primerosTres.add(p);
+			tresPrimer.add(p);
 			contador++;
 		}
 
-		return primerosTres;
+		return tresPrimer;
 	}
 
 }
