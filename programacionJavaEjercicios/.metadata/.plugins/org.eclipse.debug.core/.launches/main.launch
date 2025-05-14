@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-        <listEntry value="/GestorDeEventos/src/Logica/Main.java"/>
+        <listEntry value="/PracticaStream/src/Practica/Main.java"/>
     </listAttribute>
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
         <listEntry value="1"/>
     </listAttribute>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_EXCLUDE_TEST_CODE" value="true"/>
-    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="Logica.Main"/>
-    <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="GestorDeEventos"/>
-    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="GestorDeEventos"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="Practica.Main"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="PracticaStream"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="PracticaStream"/>
 </launchConfiguration>
