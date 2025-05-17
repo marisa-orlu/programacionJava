@@ -28,8 +28,7 @@ public class Main {
 		// limit (n), skip(n) recorta flujo
 
 		// Los dos :: es para llamar a la funcion referencia metodo
-		nombres.stream().filter(n -> n.startsWith("A")).map(String::toUpperCase).forEach(System.out::println);
-
+		nombres.stream().filter(nombre -> nombre.startsWith("A")).map(String::toUpperCase).forEach(System.out::println);
 		// OPERACIONES FINALES
 		// .forEach(Consumer) recorrer e imprimir
 		// .collect(Collectors.toList()) convierte a Lista
