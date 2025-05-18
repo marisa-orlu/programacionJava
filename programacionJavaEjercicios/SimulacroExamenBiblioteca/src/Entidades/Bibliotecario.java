@@ -4,12 +4,12 @@ import Gestion.Mostrable;
 
 public class Bibliotecario implements Mostrable {
 	protected String nombre;
-	protected int id;
+	protected String dni;
 
-	public Bibliotecario(String nombre, int id) {
+	public Bibliotecario(String nombre, String dni) {
 		super();
 		this.nombre = nombre;
-		this.id = id;
+		this.dni = dni;
 	}
 
 	public String getNombre() {
@@ -20,17 +20,22 @@ public class Bibliotecario implements Mostrable {
 		this.nombre = nombre;
 	}
 
-	public int getId() {
-		return id;
+	public String getDni() {
+		return dni;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setDni(String dni) {
+		this.dni = dni;
+	}
+
+	@Override
+	public String toString() {
+		return "\n--Nombre: " + nombre + "\n--Dni: " + dni;
 	}
 
 	@Override
 	public String resumen() {
-		return "Bibliotecario\n -Nombre: " + nombre + "\n-Id: " + id;
+		return null;
 	}
 
 }

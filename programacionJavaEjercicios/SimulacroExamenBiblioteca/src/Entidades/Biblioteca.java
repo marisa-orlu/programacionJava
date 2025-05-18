@@ -29,4 +29,9 @@ public class Biblioteca {
 		this.listaLibros = listaLibros;
 	}
 
+	@Override
+	public String toString() {
+		return "---Biblioteca:" + nombreBiblioteca + "\n---ListaLibros: " + listaLibros;
+	}
+
 }
