@@ -39,5 +39,10 @@ public abstract class Libro {
 		this.listaBibliotecarios = listaBibliotecarios;
 	}
 
+	@Override
+	public String toString() {
+		return "\n-Titulo: " + titulo + "\n-Valoracion=" + valoracion + "\n-listaBibliotecarios=" + listaBibliotecarios;
+	}
+
 	public abstract String getGenero();
 }
