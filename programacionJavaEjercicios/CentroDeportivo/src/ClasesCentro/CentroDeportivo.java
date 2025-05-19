@@ -33,5 +33,9 @@ public class CentroDeportivo {
 	public String toString() {
 		return "CentroDeportivo [nombreCentro=" + nombreCentro + ", listaActividades=" + listaActividades + "]";
 	}
+//	
+//	List <Actividad> ordenadas = new ArrayList <>(activida)
+//	Collections.sort(ordenadas);
+//	return ordenadas
 
 }

@@ -24,7 +24,7 @@ public class VentanaPartido extends JFrame {
 		this.setBounds(90, 40, 700, 500);
 		this.setVisible(true);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		this.setTitle("Betis vs Sevilla");
+		this.setTitle("María Luisa Ortega Lucena Betis vs Sevilla");
 		this.getContentPane().setBackground(Color.white);
 		this.setLayout(null);
 

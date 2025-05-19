@@ -1,13 +1,7 @@
 INDEX VERSION 1.134+C:\Users\maris\Desktop\programacionJava\programacionJavaEjercicios\.metadata\.plugins\org.eclipse.jdt.core
 1497141728.index
 1865797976.index
-1821844599.index
-2711450784.index
-<<<<<<< HEAD
 1526063871.index
-=======
-422488848.index
->>>>>>> e2344dcc7eb0b2377345a9c3cafbf7520f86cdcc
 2405252881.index
+252651272.index
 1288848795.index
-756117498.index

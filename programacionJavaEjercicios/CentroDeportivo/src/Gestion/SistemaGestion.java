@@ -62,6 +62,7 @@ public class SistemaGestion {
 		for (CentroDeportivo centro : listaCentros) {
 			if (centro.getNombreCentro().equals(nombreCentro)) {
 				centro.getListaActividades().add(actividad);
+				// Crear metodo auxiliar para añadir actividad
 				break;
 			}
 		}
@@ -114,9 +115,10 @@ public class SistemaGestion {
 				for (Actividad actividad : centro.getListaActividades()) {
 					String tipo = actividad.getTipo();
 					if (contar.containsKey(tipo)) {
-						contar.put(tipo, contar.get(tipo) + 1);
+						contar.put(tipo, contar.get(tipo) + 1); // tipo se llama así mismo, y coge el tipo y le suma 1
 					} else {
-						contar.put(tipo, (long) 1);
+						contar.put(tipo, (long) 1); // Esto para que es?Se puede quitar?
+
 					}
 				}
 			}

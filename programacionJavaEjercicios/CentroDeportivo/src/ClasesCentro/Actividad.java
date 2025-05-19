@@ -51,4 +51,6 @@ public abstract class Actividad implements Comparable<Actividad> {
 		return Integer.compare(o.nivelActividad, this.nivelActividad);
 	}
 
+	// hacer metodo para asignar monitor= monitores.add(monitor);
+
 }

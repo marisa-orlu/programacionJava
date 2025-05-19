@@ -12,11 +12,9 @@ public class Cardio extends Actividad {
 	// Revisar, esta vacio
 	@Override
 	public int compareTo(Actividad o) {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
-	// Revisar, esta vacio
 	@Override
 	public String getTipo() {
 		return "Cardio";

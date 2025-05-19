@@ -1,3 +1,7 @@
+/*
+ * María Luisa Ortega Lucena
+ */
+
 package PartidoBetisSevilla;
 
 public class App {
