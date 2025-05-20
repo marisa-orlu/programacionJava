@@ -11,4 +11,8 @@ public class Ensayo extends Libro {
 		return "Ensayo";
 	}
 
+	@Override
+	public int compareTo(Libro o) {
+		return 0;
+	}
 }

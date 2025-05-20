@@ -53,7 +53,8 @@
     <fullyQualifiedTypeName name="java.util.Optional"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="Gestion.SistemaBibliotecas"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="Entidades.Biblioteca"/>
+    <fullyQualifiedTypeName name="ClasesEntidades.Estudiante"/>
 </qualifiedTypeNameHistroy>

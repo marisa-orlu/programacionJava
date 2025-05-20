@@ -11,4 +11,9 @@ public class Novela extends Libro {
 		return "Novela";
 	}
 
+	@Override
+	public int compareTo(Libro o) {
+		return 0;
+	}
+
 }
