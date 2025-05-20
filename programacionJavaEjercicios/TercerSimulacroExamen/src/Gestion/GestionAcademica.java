@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import ClasesEntidades.Asignatura;
 import ClasesEntidades.Estudiante;
@@ -108,16 +109,37 @@ public class GestionAcademica {
 	// Stream
 	// 1. **obtenerEstudiantesMayoresDe(int edad):** Devuelve una lista de
 	// estudiantes mayores de la edad indicada.
+	public List<Estudiante> obtenerEstudiantesMayoresDe(int edad) {
+		return listaEstudiantes.stream().filter(estudiante -> estudiante.getEdad() > edad).toList();
+	}
 
 	// 2. **obtenerAsignaturasPorProfesor(String idProfesor):** Devuelve una lista
 	// de asignaturas impartidas por un profesor con ese ID.
+	public List<Asignatura> obtenerAsignaturasPorProfesor(String idProfesor) {
+		return listaAsignaturas.values().stream()
+				.filter(profesor -> profesor.getProfesor().getId().equalsIgnoreCase(idProfesor)).toList();
+	}
 
 	// 3. **contarEstudiantesPorAsignatura(String codigoAsignatura):** Devuelve el
 	// número de estudiantes matriculados en una asignatura.
+	public long contarEstudiantesPorAsignatura(String codigoAsignatura) {
+		return listaAsignaturas.values().stream()
+				.filter(estudiante -> estudiante.getCodigo().equalsIgnoreCase(codigoAsignatura)).count();
+	}
 
 	// 4. **listarNombresEstudiantesAsignatura(String codigoAsignatura):** Devuelve
 	// una lista de los nombres de los estudiantes de una asignatura.
+	public List<String> listarNombresEstudiantesAsignatura(String codigoAsignatura) {
+		return listaAsignaturas.values().stream().filter(asig -> asig.getCodigo().equalsIgnoreCase(codigoAsignatura))
+				.findFirst().map(asig -> asig.getListaEstudiantes().stream().map(Estudiante::getNombre)
+						.collect(Collectors.toList()))
+				.orElse(null);
+
+	}
 
 	// 5. **promedioEdadEstudiantes():** Devuelve el promedio de edad de todos los
 	// estudiantes registrados.
+	public double promedioEdadEstudiantes() {
+		return listaEstudiantes.stream().mapToDouble(Estudiante::getEdad).average().orElse(0.0);
+	}
 }

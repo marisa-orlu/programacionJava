@@ -27,7 +27,6 @@
     <fullyQualifiedTypeName name="Gestion.Gestion"/>
     <fullyQualifiedTypeName name="ClasesPapeleria.Libro"/>
     <fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
-    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="ClasesIncidencias.Incidencias"/>
     <fullyQualifiedTypeName name="operacion.Calculadora"/>
@@ -58,4 +57,5 @@
     <fullyQualifiedTypeName name="ClasesEntidades.Estudiante"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
 </qualifiedTypeNameHistroy>
