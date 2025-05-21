@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.Math"/>
-    <fullyQualifiedTypeName name="java.util.Random"/>
-    <fullyQualifiedTypeName name="ejercicio2Examen.Discos"/>
-    <fullyQualifiedTypeName name="herencia.Persona"/>
-    <fullyQualifiedTypeName name="es.practica.poo.herencia.Persona"/>
-    <fullyQualifiedTypeName name="es.practica.poo.herencia.Profesor"/>
     <fullyQualifiedTypeName name="java.lang.VerifyError"/>
     <fullyQualifiedTypeName name="es.practica.poo.polimorfismo.Vehiculo"/>
     <fullyQualifiedTypeName name="es.practica.poo.polimorfismo.Coche"/>
@@ -51,11 +45,19 @@
     <fullyQualifiedTypeName name="ClasesCentro.Monitor"/>
     <fullyQualifiedTypeName name="java.util.Optional"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="Gestion.SistemaBibliotecas"/>
     <fullyQualifiedTypeName name="Entidades.Biblioteca"/>
     <fullyQualifiedTypeName name="ClasesEntidades.Estudiante"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="Gestion.GestionAcademica"/>
+    <fullyQualifiedTypeName name="gestor.GestionBiblioteca"/>
+    <fullyQualifiedTypeName name="Clases.Bibliotecario"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.ArrayBlockingQueue"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="java.util.HashSet"/>
-    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="ModeladoClases.ZonaHuerto"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="ModeladoClases.Cultivo.Temporada"/>
+    <fullyQualifiedTypeName name="ModeladoClases.Riego"/>
+    <fullyQualifiedTypeName name="Gestion.HuertoLopeDeVega"/>
 </qualifiedTypeNameHistroy>

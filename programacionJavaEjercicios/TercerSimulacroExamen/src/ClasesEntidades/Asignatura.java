@@ -1,5 +1,6 @@
 package ClasesEntidades;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import Gestion.Evaluable;
@@ -11,12 +12,12 @@ public class Asignatura implements Evaluable {
 	protected Profesor profesor;
 	protected List<Estudiante> listaEstudiantes;
 
-	public Asignatura(String nombre, String codigo, Profesor profesor, List<Estudiante> listaEstudiantes) {
+	public Asignatura(String nombre, String codigo, Profesor profesor) {
 		super();
 		this.nombre = nombre;
 		this.codigo = codigo;
 		this.profesor = profesor;
-		this.listaEstudiantes = listaEstudiantes;
+		this.listaEstudiantes = new ArrayList<>();
 	}
 
 	public String getNombre() {
@@ -49,6 +50,12 @@ public class Asignatura implements Evaluable {
 
 	public void setListaEstudiantes(List<Estudiante> listaEstudiantes) {
 		this.listaEstudiantes = listaEstudiantes;
+	}
+
+	@Override
+	public String toString() {
+		return "Asignatura [nombre=" + nombre + ", codigo=" + codigo + ", profesor=" + profesor + ", listaEstudiantes="
+				+ listaEstudiantes + "]";
 	}
 
 	@Override

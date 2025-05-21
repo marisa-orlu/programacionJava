@@ -18,6 +18,7 @@ public class Profesor extends Persona {
 
 	@Override
 	public String getId() {
-		return "Id: " + this.id;
+		return this.id;
 	}
+
 }

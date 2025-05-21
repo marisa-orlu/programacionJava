@@ -60,7 +60,7 @@ public class GestionAcademica {
 	}
 
 	// 2. **registrarProfesor(Profesor profesor):** Añade un profesor al set.
-	public void resgistrarProfesor(Profesor profesor) {
+	public void registrarProfesor(Profesor profesor) {
 		listaProfesores.add(profesor);
 	}
 
@@ -115,9 +115,14 @@ public class GestionAcademica {
 
 	// 2. **obtenerAsignaturasPorProfesor(String idProfesor):** Devuelve una lista
 	// de asignaturas impartidas por un profesor con ese ID.
+//	public List<Asignatura> obtenerAsignaturasPorProfesor(String idProfesor) {
+//		return listaAsignaturas.values().stream()
+//				.filter(profesor -> profesor.getProfesor().getId().equalsIgnoreCase(idProfesor)).toList();
+//	}
+
 	public List<Asignatura> obtenerAsignaturasPorProfesor(String idProfesor) {
 		return listaAsignaturas.values().stream()
-				.filter(profesor -> profesor.getProfesor().getId().equalsIgnoreCase(idProfesor)).toList();
+				.filter(asignatura -> asignatura.getProfesor().getId().equalsIgnoreCase(idProfesor)).toList();
 	}
 
 	// 3. **contarEstudiantesPorAsignatura(String codigoAsignatura):** Devuelve el
